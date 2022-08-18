@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const Section2 = () => {
   const ref = useRef(null);
@@ -12,15 +12,15 @@ const Section2 = () => {
       id="key"
     >
       <div className="z-10 px-2 text-center sm:px-0">
-        <h1 className="z-10 bg-gradient-to-r from-blue-400 via-pink-400 to-orange-400 bg-clip-text text-2xl font-bold text-transparent xxs:text-5xl sm:text-8xl">
+        <h1 className="z-10 bg-gradient-to-r from-blue-400 via-pink-400 to-orange-400 bg-clip-text text-2xl font-bold text-transparent sm:text-8xl xxs:text-5xl">
           The Key is the Key
         </h1>
-        <h2 className="z-10 text-base font-medium text-slate-500 xs:text-xl sm:text-3xl">
+        <h2 className="z-10 text-base font-medium text-slate-500 sm:text-3xl xs:text-xl">
           Know why it's important
         </h2>
       </div>
       <div className="z-10 flex w-full flex-col items-center justify-center gap-10 px-2 sm:px-0 md:flex-row">
-        <div className="w-4/5 xs:w-3/5 md:w-96">
+        <div className="w-4/5 md:w-96 xs:w-3/5">
           <lottie-player
             src="/animations/password_lock_animation.json"
             background="transparent"
@@ -30,7 +30,7 @@ const Section2 = () => {
             autoplay
           ></lottie-player>
         </div>
-        <p className="w-full px-5 text-center text-sm text-slate-300 xs:text-base sm:px-16 sm:text-2xl md:w-1/3 md:px-0 md:text-left">
+        <p className="w-full px-5 text-center text-sm text-slate-300 sm:px-16 sm:text-2xl md:w-1/3 md:px-0 md:text-left xs:text-base">
           Your secret key must be unique to you. It's important to choose a
           secret key that nobody else could guess and make sure you use a
           combination of symbols, uppercase letters and numbers for extra

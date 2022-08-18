@@ -1,17 +1,17 @@
+import { generatePashword } from "@utils/pashword";
 import { passwordStrength } from "check-password-strength";
-import { generatePashword } from "../utils/pashword";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { BiCopy, BiMouse } from "react-icons/bi";
-import NotWorkingModal from "./NotWorkingModal";
-import ReactTooltip from "react-tooltip";
-import { toast } from "react-toastify";
-import Dropdown from "./Dropdown";
 import {
   AiFillEye,
   AiFillEyeInvisible,
   AiFillQuestionCircle,
 } from "react-icons/ai";
-import Link from "next/link";
+import { BiCopy, BiMouse } from "react-icons/bi";
+import { toast } from "react-toastify";
+// import ReactTooltip from "react-tooltip";
+import Dropdown from "./Dropdown";
+import NotWorkingModal from "./NotWorkingModal";
 
 interface IProps {
   passwordLength: number;
@@ -49,7 +49,7 @@ const HeroSection = ({ passwordLength, setPasswordLength }: IProps) => {
 
   useEffect(() => {
     setPassStrength(passwordStrength(password).id);
-    console.log(passwordStrength(password).id);
+    // console.log(passwordStrength(password).id);
   }, [password]);
 
   const submitHandler = (e: React.FormEvent) => {
@@ -110,11 +110,11 @@ const HeroSection = ({ passwordLength, setPasswordLength }: IProps) => {
       {/* TOP SECTION */}
       <main className="flex flex-col items-center justify-center">
         {/* LOGO */}
-        <h1 className="background-animate z-10 text-2xl font-bold text-slate-50 xxs:text-6xl xs:text-7xl sm:text-8xl">
+        <h1 className="background-animate z-10 text-2xl font-bold text-slate-50 sm:text-8xl xxs:text-6xl xs:text-7xl">
           Pashword
         </h1>
         {/* SUB-HEADING */}
-        <h5 className="z-10 text-center text-xs font-medium text-slate-400 xxs:text-lg xs:self-end sm:text-xl">
+        <h5 className="z-10 text-center text-xs font-medium text-slate-400 sm:text-xl xxs:text-lg xs:self-end">
           Passwords done right
         </h5>
 
@@ -202,10 +202,11 @@ const HeroSection = ({ passwordLength, setPasswordLength }: IProps) => {
                   }}
                 />
               )}
-              <Link href="#key" passHref>
-                <a className="absolute right-2 hidden text-slate-500 xxs:-bottom-6 xxs:block md:-bottom-7">
-                  Read This
-                </a>
+              <Link
+                href="#key"
+                className="absolute right-2 hidden text-slate-500 md:-bottom-7 xxs:-bottom-6 xxs:block"
+              >
+                Read This
               </Link>
             </div>
             {/* <AiFillEyeInvisible /> */}
@@ -239,7 +240,7 @@ const HeroSection = ({ passwordLength, setPasswordLength }: IProps) => {
             <p className="mx-auto w-3/5 select-all truncate font-medium text-green-100 md:w-full">
               {pashword}
             </p>
-            <BiCopy className="absolute right-3 top-5 select-none text-sm text-green-300 xs:text-base sm:text-2xl" />
+            <BiCopy className="absolute right-3 top-5 select-none text-sm text-green-300 sm:text-2xl xs:text-base" />
           </div>
         </form>
         {pashword.length > 0 && (
@@ -274,7 +275,7 @@ const HeroSection = ({ passwordLength, setPasswordLength }: IProps) => {
           Scroll to Learn More
         </div>
       )}
-      <ReactTooltip className="w-72 bg-white" />
+      {/* <ReactTooltip className="w-72 bg-white" /> */}
     </section>
   );
 };

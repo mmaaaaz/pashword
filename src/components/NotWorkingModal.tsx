@@ -1,7 +1,7 @@
 import { Dialog, Switch, Transition } from "@headlessui/react";
+import { generatePashword, sanitize } from "@utils/pashword";
 import React, { useEffect, useState } from "react";
 import { AiFillCheckCircle } from "react-icons/ai";
-import { generatePashword, sanitize } from "../utils/pashword";
 
 interface IProps {
   notWorking: boolean;
@@ -35,7 +35,6 @@ const NotWorkingModal = ({
   password,
   username,
   pashword,
-  setPashword,
 }: IProps) => {
   const [newPashword, setNewPashword] = useState(pashword);
 

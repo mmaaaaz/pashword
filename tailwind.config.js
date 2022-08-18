@@ -1,17 +1,12 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+
   theme: {
-    screens: {
-      xxs: "340px",
-      xs: "425px",
-      ...defaultTheme.screens,
-    },
     extend: {
+      screens: {
+        xxs: "340px",
+        xs: "425px",
+      },
       animation: {
         bg: "bg 50s infinite ease",
         blob: "blob 25s infinite ease",
@@ -71,5 +66,4 @@ module.exports = {
       },
     },
   },
-  plugins: [],
 };

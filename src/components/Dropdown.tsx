@@ -1,7 +1,6 @@
-import { Listbox, Transition } from "@headlessui/react";
-import PASSWORD_LENGTH from "../constants/passwordLength";
+import { Listbox } from "@headlessui/react";
 import { HiOutlineSelector } from "react-icons/hi";
-import React from "react";
+import PASSWORD_LENGTH from "../constants/passwordLength";
 
 interface IProps {
   passwordLength: number;

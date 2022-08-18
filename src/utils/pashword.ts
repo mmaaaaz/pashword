@@ -1,6 +1,6 @@
 import * as bigintConversion from "bigint-conversion";
-import scrypt from "scrypt-js";
 import jsSHA from "jssha";
+import scrypt from "scrypt-js";
 
 // Variables for Scrypt Hashing
 const N = 1 << 15;

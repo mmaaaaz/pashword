@@ -1,5 +1,5 @@
-import PASSWORD_LENGTH from "../constants/passwordLength";
-import { generatePashword } from "../utils/pashword";
+import PASSWORD_LENGTH from "@constants/passwordLength";
+import { generatePashword } from "@utils/pashword";
 
 test("Password is always the same", () => {
   expect(
